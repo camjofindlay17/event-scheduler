@@ -109,6 +109,7 @@ function renderColor() {
     } 
     if (time = "18:00:00") {
         localStorage.clear();
+        location.reload() // will reload the screen at the end of the day, clearing the stored items
     }
 }
 
@@ -198,6 +199,7 @@ let localStore = {
 
 saveScr9.on ("click", function() {
     localStore.nine()
+    // location.reload() - if this were put on every one, it would clear the rest at each save point. not-user friendly
 });
 saveScr10.on ("click", function() {
     localStore.ten()
